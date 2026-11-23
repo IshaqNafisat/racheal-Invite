@@ -12,8 +12,11 @@ const CONFIG = {
   accounts: [
     { number: "8147932357", bank: "Opay", name: "Noah Alikeju Racheal" },
   ],
-  music: "/assets/music.mp3",
-  photo: "/assets/couple.jpg",
+  // music: "/assets/music.mp3",
+  // photo: "/assets/rj27.jpg",
+
+  photo: import.meta.env.BASE_URL + "assets/rj27.jpg",
+  music: import.meta.env.BASE_URL + "assets/music.mp3",
 };
 
 const EVENTS = [
@@ -191,7 +194,7 @@ export default function App() {
             <figure className="frame">
               {photoOk
                 ? <img src={CONFIG.photo} alt="Racheal and Joseph" onError={() => setPhotoOk(false)} />
-                : <div className="ph"><Rose size={60} cream /><span>Couple’s photo goes here</span><small>Add <code>public/assets/couple.jpg</code></small></div>}
+                : <div className="ph"><Rose size={60} cream /><span>Couple’s photo goes here</span></div>}
               <figcaption>{CONFIG.tag} · Together, always</figcaption>
             </figure>
           </Reveal>
